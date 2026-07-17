@@ -1,70 +1,40 @@
-/* Rule / divider */
-.rule {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #050110;
+  color: #f2ecff;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin: 40px 0 18px;
-  color: #6f5f93;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-.rule::before,
-.rule::after {
-  content: "";
-  height: 1px;
-  flex: 1;
-  background: rgba(168, 85, 247, 0.15);
+  justify-content: center;
 }
 
-/* Profit Grid */
-.profit-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin-top: 8px;
-}
-
-.profit-card {
-  background: rgba(168, 85, 247, 0.06);
-  border: 1px solid rgba(168, 85, 247, 0.15);
-  border-radius: 14px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.profit-card:hover {
-  transform: scale(1.02);
-}
-
-.profit-card img {
+.wrap {
+  max-width: 480px;
   width: 100%;
-  height: auto;
-  display: block;
-  border-bottom: 1px solid rgba(168, 85, 247, 0.1);
+  padding: 30px 20px;
+  text-align: center;
 }
 
-.profit-label {
-  font-size: 20px;
-  font-weight: 700;
-  color: #3ce88a;
-  padding: 10px 8px 2px;
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 20px;
+  border: 2px solid #a855f7;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.3);
 }
 
-.profit-sub {
-  font-size: 11px;
-  color: #6f5f93;
-  padding: 0 8px 12px;
-}
-
-/* Responsive */
-@media (max-width: 420px) {
-  .profit-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-  }
-}  object-fit: cover;
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 h1 {
@@ -93,14 +63,81 @@ h1 em {
   display: block;
   padding: 14px 20px;
   border-radius: 12px;
-  background: rgba(168, 85, 247, 0.08);
-  border: 1px solid rgba(168, 85, 247, 0.2);
+  background: rgba(168, 85, 247, 0.06);
+  border: 1px solid rgba(168, 85, 247, 0.15);
   color: #f2ecff;
   text-decoration: none;
-  font-weight: 600;
-  transition: background 0.2s;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.15s;
 }
 
 .link:hover {
-  background: rgba(168, 85, 247, 0.18);
+  background: rgba(168, 85, 247, 0.14);
+  transform: translateY(-2px);
+}
+
+.rule {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 40px 0 18px;
+  color: #6f5f93;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.rule::before,
+.rule::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(168, 85, 247, 0.12);
+}
+
+.profit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.profit-card {
+  background: rgba(168, 85, 247, 0.05);
+  border: 1px solid rgba(168, 85, 247, 0.12);
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.profit-card:hover {
+  transform: scale(1.02);
+}
+
+.profit-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.08);
+}
+
+.profit-label {
+  font-size: 20px;
+  font-weight: 700;
+  color: #3ce88a;
+  padding: 10px 8px 2px;
+}
+
+.profit-sub {
+  font-size: 11px;
+  color: #6f5f93;
+  padding: 0 8px 12px;
+}
+
+@media (max-width: 420px) {
+  .profit-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
 }
