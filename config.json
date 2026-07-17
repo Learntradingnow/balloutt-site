@@ -1,9 +1,14 @@
 {
   "bio": "When your gains read like a phone number, you stop explaining — you just show the tape. Top 0.1% trader results.",
   "links": [
-    { "label": "📈 Free Server", "url": "https://discord.gg/y8WGBS8tHP" },
+    { "label": "📈 Free Discord", "url": "https://discord.gg/ND6KAFaJbc" },
     { "label": "💎 Mentorship", "url": "https://discord.com/users/823730914655338538" },
-    { "label": "🐦 X (Twitter)", "url": "https://x.com/BallouttTrades" },
-    { "label": "📸 Instagram", "url": "https://instagram.com/BallouttTradesLLC" }
+    { "label": "🐦 X", "url": "https://x.com/BallouttTrades" },
+    { "label": "📸 Instagram", "url": "https://discord.gg/ND6KAFaJbc" }
+  ],
+  "profits": [
+    { "label": "+219,829%", "sub": "8-Day Challenge", "image": "assets/profit1.jpg" },
+    { "label": "+11,172%", "sub": "June 2026", "image": "assets/profit2.jpg" },
+    { "label": "+12,240%", "sub": "META Runner", "image": "assets/profit3.jpg" }
   ]
 }
