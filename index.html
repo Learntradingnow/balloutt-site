@@ -13,7 +13,11 @@
     </div>
     <h1>Balloutt <em>Trades</em></h1>
     <p class="bio" id="bio">Loading...</p>
+
     <div class="links" id="links"></div>
+
+    <div class="rule"><span>📊 Profit Wall</span></div>
+    <div class="profit-grid" id="profitGrid"></div>
   </main>
 
   <script>
@@ -21,20 +25,32 @@
       .then(r => r.json())
       .then(data => {
         document.getElementById('bio').textContent = data.bio;
-        const container = document.getElementById('links');
+
+        const linksContainer = document.getElementById('links');
         data.links.forEach(link => {
           const a = document.createElement('a');
           a.href = link.url;
           a.className = 'link';
           a.target = '_blank';
           a.textContent = link.label;
-          container.appendChild(a);
+          linksContainer.appendChild(a);
+        });
+
+        const profitContainer = document.getElementById('profitGrid');
+        data.profits.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'profit-card';
+          card.innerHTML = `
+            <img src="${p.image}" alt="${p.label}" />
+            <div class="profit-label">${p.label}</div>
+            <div class="profit-sub">${p.sub}</div>
+          `;
+          profitContainer.appendChild(card);
         });
       });
   </script>
 </body>
-</html>        });
-      });
+</html>      });
   </script>
 
 </body>
