@@ -50,6 +50,22 @@
       });
   </script>
 </body>
+</html>        });
+
+        const profitContainer = document.getElementById('profitGrid');
+        data.profits.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'profit-card';
+          card.innerHTML = `
+            <img src="${p.image}" alt="${p.label}" />
+            <div class="profit-label">${p.label}</div>
+            <div class="profit-sub">${p.sub}</div>
+          `;
+          profitContainer.appendChild(card);
+        });
+      });
+  </script>
+</body>
 </html>      });
   </script>
 
